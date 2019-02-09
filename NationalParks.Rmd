@@ -1,0 +1,25 @@
+---
+title: "US National Parks"
+author: "Paul Ringsted"
+date: "9th February 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r load}
+library(leaflet)
+df<-read.csv('coords.csv')
+
+NPicon <- makeIcon(
+  iconUrl = "npslogo.png",
+  iconWidth = 31*215/230, iconHeight = 31,
+  iconAnchorX = 31*215/230/2, iconAnchorY = 16
+)
+leaflet(df) %>% addTiles() %>% 
+        addMarkers(lng=df$Long,lat=df$Lat,
+                        label = df$ParkName,
+                        icon = NPicon)
+```
