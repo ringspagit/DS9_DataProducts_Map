@@ -1,7 +1,8 @@
 ---
 title: "US National Parks"
+subtitle: "Updated for 61st National Park - Congrats Indiana Dunes NP!"
 author: "Paul Ringsted"
-date: "9th February 2019"
+date: "19th February 2019"
 output: html_document
 ---
 
